@@ -95,6 +95,20 @@ public class calculatortest {
     }
 
     @Test
+    void testModulos(){
+        double[] arrayModulos = {4,17};
+        calculator c = new calculator();
+        assertEquals(4.0, c.modulos(arrayModulos));
+    }
+
+    @Test
+    void testDegreesToRadians(){
+        double[] arrayDegrees = {180};
+        calculator c = new calculator();
+        assertEquals(3.141592653589793, c.degreesToRadians(arrayDegrees));
+    }
+
+    @Test
     void testAddNull(){
         double[] arrayAdd = {};
         calculator c = new calculator();
@@ -116,16 +130,23 @@ public class calculatortest {
     }
 
     @Test
-    void testModulos(){
-        double[] arrayModulos = {4,17};
+    void testMultiplyByZero(){
+        double[] arrayMultiply = {7,2,5,8,0};
         calculator c = new calculator();
-        assertEquals(4.0, c.modulos(arrayModulos));
+        assertEquals(0.0, c.multiply(arrayMultiply));
     }
 
     @Test
-    void testDegreesToRadians(){
-        double[] arrayDegrees = {180};
+    void testPythagoreanZero(){
+        double[] arrayPythagorean = {0, 0};
         calculator c = new calculator();
-        assertEquals(3.141592653589793, c.degreesToRadians(arrayDegrees));
+        assertEquals(0.0, c.pythagorean(arrayPythagorean));
+    }
+
+    @Test
+    void testRootZero(){
+        double[] arrayRoot = {6,0};
+        calculator c = new calculator();
+        assertEquals(0.0, c.root(arrayRoot));
     }
 }
