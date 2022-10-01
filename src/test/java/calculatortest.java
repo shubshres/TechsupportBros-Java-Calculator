@@ -122,4 +122,10 @@ public class calculatortest {
         assertEquals(4.0, c.modulos(arrayModulos));
     }
 
+    @Test
+    void testDegreesToRadians(){
+        double[] arrayDegrees = {180};
+        calculator c = new calculator();
+        assertEquals(3.141592653589793, c.degreesToRadians(arrayDegrees));
+    }
 }
