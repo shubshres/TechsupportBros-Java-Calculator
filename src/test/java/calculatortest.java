@@ -115,4 +115,11 @@ public class calculatortest {
         assertEquals(10.0, c.subtract(arraySubtract));
     }
 
+    @Test
+    void testModulos(){
+        double[] arrayModulos = {4,17};
+        calculator c = new calculator();
+        assertEquals(4.0, c.modulos(arrayModulos));
+    }
+
 }

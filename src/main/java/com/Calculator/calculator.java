@@ -58,7 +58,9 @@ public class calculator {
 
     public static double median(double[] numbers){
         Arrays.sort(numbers);
+
         double arraySize = numbers.length;
+
         if(arraySize%2 == 0){
             int middle = numbers.length / 2;
             double median = (numbers[(middle)] + numbers[(middle-1)])/2;
@@ -70,14 +72,14 @@ public class calculator {
             int median = (int) numbers[(int) middleCeil];
             return (median);
         }
-
     }
-
     public static double mode(double[] numbers){
         double max = Arrays.stream(numbers).max().getAsDouble();
 
         int t = (int) (max + 1);
+
         double[] count = new double[t];
+
         for (int i = 0; i < t; i++)
         {
             count[i] = 0;
@@ -89,7 +91,9 @@ public class calculator {
         }
 
         int mode = 0;
+
         double k = count[0];
+
         for (int i = 1; i < t; i++)
         {
             if (count[i] > k)
@@ -108,7 +112,9 @@ public class calculator {
     }
 
     public static double standardDeviation(double[] numbers){
-        double sum = 0.0, standardDeviation = 0.0;
+        double sum = 0;
+        double standardDeviation = 0;
+
         int length = numbers.length;
 
         for(double num : numbers) {
@@ -148,6 +154,10 @@ public class calculator {
         return root;
     }
 
+    public static double modulos(double[] numbers){
+        double mod = (numbers[0] % numbers[1]);
+        return mod;
+    }
 
     public static String doOperation(String option, double[] numbers ){
         option = option.toLowerCase();
@@ -192,6 +202,9 @@ public class calculator {
             case("root"):
                 answer = root(numbers);
                 return("="+answer);
+            case("modulos"):
+                answer = modulos(numbers);
+                return("="+answer);
             default:
                 return ("error");
 
@@ -222,8 +235,8 @@ public class calculator {
                 System.out.println("\n\tpercentage:\n\t\tThis will you to find the percent x of value y");
                 System.out.println("\n\texponent:\n\t\tThis will you to find x (first input) ^ y (second input)");
                 System.out.println("\n\tpythagorean:\n\t\tThis will you to find the pythagorean theorem using two numbers");
+                System.out.println("\n\tmod:\n\t\tThis will you to find the modulos between two numbers");
                 System.out.println("\n\troot:\n\t\tThis will you to nth-root using two numbers");
-
                 System.out.println("PLEASE ENTER WHAT OPERATION YOU WOULD LIKE TO DO: ");
                 System.out.println("Type \"help\" to see options");
                 option = operation.next();
@@ -231,7 +244,8 @@ public class calculator {
         }
 
         Scanner numberOfNumbers = new Scanner(System.in);
-        if(!(operation.equals("exponent") || operation.equals("pythagorean") || operation.equals("percentage") || operation.equals("root"))){
+        if(!(operation.equals("exponent") || operation.equals("pythagorean") || operation.equals("percentage") ||
+                operation.equals("root") || operation.equals("mod"))){
             System.out.println("PLEASE ENTER HOW MANY NUMBERS YOU WOULD LIKE TO OPERATE ON (up to 10): ");
         }
         else{
