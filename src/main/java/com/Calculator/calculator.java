@@ -159,6 +159,10 @@ public class calculator {
         return mod;
     }
 
+    public static double degreesToRadians(double[] numbers){
+        double degreesToRadians = Math.toRadians((numbers[0]));
+        return degreesToRadians;
+    }
     public static String doOperation(String option, double[] numbers ){
         option = option.toLowerCase();
         double answer;
@@ -205,6 +209,9 @@ public class calculator {
             case("modulos"):
                 answer = modulos(numbers);
                 return("="+answer);
+            case("degrees to radians"):
+                answer = degreesToRadians(numbers);
+                return("="+answer);
             default:
                 return ("error");
 
@@ -237,6 +244,7 @@ public class calculator {
                 System.out.println("\n\tpythagorean:\n\t\tThis will you to find the pythagorean theorem using two numbers");
                 System.out.println("\n\tmod:\n\t\tThis will you to find the modulos between two numbers");
                 System.out.println("\n\troot:\n\t\tThis will you to nth-root using two numbers");
+                System.out.println("\n\tdegrees to radians:\n\t\tThis will you to convert degrees to radians");
                 System.out.println("PLEASE ENTER WHAT OPERATION YOU WOULD LIKE TO DO: ");
                 System.out.println("Type \"help\" to see options");
                 option = operation.next();
@@ -248,8 +256,11 @@ public class calculator {
                 operation.equals("root") || operation.equals("mod"))){
             System.out.println("PLEASE ENTER HOW MANY NUMBERS YOU WOULD LIKE TO OPERATE ON (up to 10): ");
         }
+        else if(operation.equals("degrees to radians")){
+            System.out.println("PLEASE ENTER A NUMBER: ");
+        }
         else{
-            System.out.println("PLEASE ENTER TWO NUMBERS ");
+            System.out.println("PLEASE ENTER TWO NUMBERS: ");
         }
         amountOfNumbers = numberOfNumbers.nextInt();
 
