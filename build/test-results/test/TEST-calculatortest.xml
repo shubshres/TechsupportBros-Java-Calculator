@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="calculatortest" tests="21" skipped="0" failures="0" errors="0" timestamp="2022-10-01T16:05:53" hostname="OnePlus-Nord-CE-5G.dhost.uta.edu" time="0.08">
+<testsuite name="calculatortest" tests="44" skipped="0" failures="0" errors="0" timestamp="2022-10-04T02:23:20" hostname="Mohammeds-MBP.dhost.uta.edu" time="0.049">
   <properties/>
-  <testcase name="testPythagorean()" classname="calculatortest" time="0.029"/>
-  <testcase name="testPercentage()" classname="calculatortest" time="0.003"/>
-  <testcase name="testAddNull()" classname="calculatortest" time="0.001"/>
-  <testcase name="testMedianOdd()" classname="calculatortest" time="0.003"/>
-  <testcase name="testAdd()" classname="calculatortest" time="0.002"/>
-  <testcase name="testSubtract()" classname="calculatortest" time="0.0"/>
-  <testcase name="testPythagoreanNegative()" classname="calculatortest" time="0.001"/>
-  <testcase name="testRange()" classname="calculatortest" time="0.001"/>
-  <testcase name="testMode()" classname="calculatortest" time="0.009"/>
-  <testcase name="testRoot()" classname="calculatortest" time="0.001"/>
-  <testcase name="testMultiplyByZero()" classname="calculatortest" time="0.001"/>
-  <testcase name="testAddNegativeNumbers()" classname="calculatortest" time="0.001"/>
-  <testcase name="testPythagoreanZero()" classname="calculatortest" time="0.002"/>
-  <testcase name="testRootZero()" classname="calculatortest" time="0.0"/>
-  <testcase name="testModulos()" classname="calculatortest" time="0.0"/>
-  <testcase name="testDegreesToRadians()" classname="calculatortest" time="0.0"/>
-  <testcase name="testSubtractWithNegative()" classname="calculatortest" time="0.001"/>
-  <testcase name="testMedianEven()" classname="calculatortest" time="0.002"/>
-  <testcase name="testDivide()" classname="calculatortest" time="0.001"/>
-  <testcase name="testStandardDeviation()" classname="calculatortest" time="0.002"/>
-  <testcase name="testMultiply()" classname="calculatortest" time="0.001"/>
+  <testcase name="test10()" classname="calculatortest" time="0.016"/>
+  <testcase name="test11()" classname="calculatortest" time="0.001"/>
+  <testcase name="test12()" classname="calculatortest" time="0.001"/>
+  <testcase name="test13()" classname="calculatortest" time="0.001"/>
+  <testcase name="test14()" classname="calculatortest" time="0.001"/>
+  <testcase name="test15()" classname="calculatortest" time="0.001"/>
+  <testcase name="test16()" classname="calculatortest" time="0.001"/>
+  <testcase name="test17()" classname="calculatortest" time="0.001"/>
+  <testcase name="test18()" classname="calculatortest" time="0.001"/>
+  <testcase name="test19()" classname="calculatortest" time="0.001"/>
+  <testcase name="test20()" classname="calculatortest" time="0.0"/>
+  <testcase name="test21()" classname="calculatortest" time="0.0"/>
+  <testcase name="test22()" classname="calculatortest" time="0.001"/>
+  <testcase name="test23()" classname="calculatortest" time="0.0"/>
+  <testcase name="test24()" classname="calculatortest" time="0.0"/>
+  <testcase name="test25()" classname="calculatortest" time="0.001"/>
+  <testcase name="test26()" classname="calculatortest" time="0.0"/>
+  <testcase name="test27()" classname="calculatortest" time="0.001"/>
+  <testcase name="test28()" classname="calculatortest" time="0.001"/>
+  <testcase name="test29()" classname="calculatortest" time="0.0"/>
+  <testcase name="test30()" classname="calculatortest" time="0.0"/>
+  <testcase name="test31()" classname="calculatortest" time="0.0"/>
+  <testcase name="test32()" classname="calculatortest" time="0.0"/>
+  <testcase name="test33()" classname="calculatortest" time="0.0"/>
+  <testcase name="test34()" classname="calculatortest" time="0.001"/>
+  <testcase name="test35()" classname="calculatortest" time="0.001"/>
+  <testcase name="test36()" classname="calculatortest" time="0.0"/>
+  <testcase name="test37()" classname="calculatortest" time="0.0"/>
+  <testcase name="test38()" classname="calculatortest" time="0.001"/>
+  <testcase name="test39()" classname="calculatortest" time="0.0"/>
+  <testcase name="test40()" classname="calculatortest" time="0.0"/>
+  <testcase name="test41()" classname="calculatortest" time="0.001"/>
+  <testcase name="test42()" classname="calculatortest" time="0.0"/>
+  <testcase name="test43()" classname="calculatortest" time="0.001"/>
+  <testcase name="test44()" classname="calculatortest" time="0.0"/>
+  <testcase name="test1()" classname="calculatortest" time="0.001"/>
+  <testcase name="test2()" classname="calculatortest" time="0.0"/>
+  <testcase name="test3()" classname="calculatortest" time="0.001"/>
+  <testcase name="test4()" classname="calculatortest" time="0.0"/>
+  <testcase name="test5()" classname="calculatortest" time="0.001"/>
+  <testcase name="test6()" classname="calculatortest" time="0.0"/>
+  <testcase name="test7()" classname="calculatortest" time="0.0"/>
+  <testcase name="test8()" classname="calculatortest" time="0.001"/>
+  <testcase name="test9()" classname="calculatortest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
