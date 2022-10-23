@@ -163,9 +163,50 @@ public class calculator {
         double degreesToRadians = Math.toRadians((numbers[0]));
         return degreesToRadians;
     }
+
+    public static String checkRightTriangle(double[] numbers){
+        double a = numbers[0];
+        double b = numbers[1];
+        double c = numbers[2];
+
+
+
+        // Check if all sides are greater than 0
+        if(a > 0 && b > 0 && c > 0){
+
+            // Check if C is hypotenuse
+            if(a*a + b*b == c*c){
+                return("Yes it is a right triangle and C (third side) is the hypotenuse");
+            }
+
+            // Check if B is hypotenuse
+            if(a*a + c*c == b*b){
+                return("Yes it is a right triangle and B (second side) is the hypotenuse");
+            }
+
+            // Check if A is hypotenuse
+            if(b*b + c*c == a*a){
+                return("Yes it is a right triangle and A (first side) is the hypotenuse");
+            }
+
+            return("This is NOT a right triangle");
+
+
+
+        }
+        else{
+
+            return ("Invalid input - Not all sides have a length greater than 0");
+        }
+
+    }
+
+    //public static String checkNumberType(double)
+
     public static String doOperation(String option, double[] numbers ){
         option = option.toLowerCase();
         double answer;
+        String result;
         switch (option){
             case("add"):
                 answer = add(numbers);
@@ -212,6 +253,8 @@ public class calculator {
             case("degrees to radians"):
                 answer = degreesToRadians(numbers);
                 return("="+answer);
+            case("check right triangle"):
+                return(checkRightTriangle(numbers));
             default:
                 return ("error");
 
@@ -224,7 +267,7 @@ public class calculator {
         Scanner operation = new Scanner(System.in);
         System.out.println("PLEASE ENTER WHAT OPERATION YOU WOULD LIKE TO DO: ");
         System.out.println("Type \"help\" to see options");
-        String option = operation.next();
+        String option = operation.nextLine();
 
         option.toLowerCase();
         if(option.equals("help")){
@@ -252,16 +295,20 @@ public class calculator {
         }
 
         Scanner numberOfNumbers = new Scanner(System.in);
-        if(!(operation.equals("exponent") || operation.equals("pythagorean") || operation.equals("percentage") ||
-                operation.equals("root") || operation.equals("mod"))){
+        if(!(option.equals("exponent") || option.equals("pythagorean") || option.equals("percentage") ||
+                option.equals("root") || option.equals("mod") || option.equals("check right triangle"))){
             System.out.println("PLEASE ENTER HOW MANY NUMBERS YOU WOULD LIKE TO OPERATE ON (up to 10): ");
         }
-        else if(operation.equals("degrees to radians")){
+        else if(option.equals("degrees to radians")){
             System.out.println("PLEASE ENTER A NUMBER: ");
+        }
+        else if(option.equals("check right triangle")){
+            System.out.println("PLEASE ENTER 3 NUMBERS (EACH SIDE OF TRIANGLE)");
         }
         else{
             System.out.println("PLEASE ENTER TWO NUMBERS: ");
         }
+
         amountOfNumbers = numberOfNumbers.nextInt();
 
         double[] numbers = new double[amountOfNumbers];
