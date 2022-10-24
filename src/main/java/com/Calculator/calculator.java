@@ -201,7 +201,36 @@ public class calculator {
 
     }
 
-    //public static String checkNumberType(double)
+    public static String checkNumberType(double[] numbers){
+
+        double num = numbers[0];
+
+        //Check if the number is whole number (integer)
+        if(num % 1 == 0){
+
+            //Check if number is positive (natural number)
+            if(num > 0){
+
+                return("The number " + num + " is a natural number");
+
+            }
+            // check if number is zero
+            else if(num == 0){
+                return("The number " + num + " is a whole number, but NOT an integer");
+            }
+            // check if number is negative, if it is negative it is an integer
+            else{
+                return("The number " + " is an integer");
+            }
+
+        }
+        // if number has decimal points, then it is rational
+        else{
+            return ("The number " + num + " is rational");
+        }
+
+
+    }
 
     public static String doOperation(String option, double[] numbers ){
         option = option.toLowerCase();
@@ -255,6 +284,8 @@ public class calculator {
                 return("="+answer);
             case("check right triangle"):
                 return(checkRightTriangle(numbers));
+            case("check number type"):
+                return(checkNumberType(numbers));
             default:
                 return ("error");
 
@@ -295,25 +326,23 @@ public class calculator {
         }
 
         Scanner numberOfNumbers = new Scanner(System.in);
-        if(!(option.equals("exponent") || option.equals("pythagorean") || option.equals("percentage") ||
-                option.equals("root") || option.equals("mod") || option.equals("check right triangle"))){
-            System.out.println("PLEASE ENTER HOW MANY NUMBERS YOU WOULD LIKE TO OPERATE ON (up to 10): ");
-        }
-        else if(option.equals("degrees to radians")){
+
+        if(option.equals("degrees to radians") || option.equals("check number type")){
             System.out.println("PLEASE ENTER A NUMBER: ");
+            amountOfNumbers = 1;
         }
-        else if(option.equals("check right triangle")){
-            System.out.println("PLEASE ENTER 3 NUMBERS (EACH SIDE OF TRIANGLE)");
+        else if(!(option.equals("exponent") || option.equals("pythagorean") || option.equals("percentage") ||
+                option.equals("root") || option.equals("mod"))){
+            System.out.println("PLEASE ENTER HOW MANY NUMBERS YOU WOULD LIKE TO OPERATE ON: ");
+            amountOfNumbers = numberOfNumbers.nextInt();
+            System.out.println("ENTER YOUR ARRAY OF NUMBERS: ");
         }
         else{
             System.out.println("PLEASE ENTER TWO NUMBERS: ");
+            amountOfNumbers = 2;
         }
 
-        amountOfNumbers = numberOfNumbers.nextInt();
-
         double[] numbers = new double[amountOfNumbers];
-
-        System.out.println("ENTER YOUR ARRAY OF NUMBERS: ");
 
         Scanner list = new Scanner(System.in);
         for(int i = 0; i < amountOfNumbers; i++){
