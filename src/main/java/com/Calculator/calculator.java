@@ -237,7 +237,7 @@ public class calculator {
 
 
         double num = numbers[0];
-        String output = ""; // def
+        String output = "";
         ArrayList<Integer> multipleValues = new ArrayList<Integer>();
 
         int count = 1;  //def
@@ -256,13 +256,13 @@ public class calculator {
         }
 
 //      //Output
-        output = num + " is a multiple of: "; //def
+        output = num + " is a multiple of: ";
 
         // Iterating using for loop
         for (int i = 0; i < multipleValues.size(); i++){
 
             // Printing and display the elements in ArrayList
-            output = output + " " + Integer.toString(multipleValues.get(i)) + " "; //def
+            output = output + " " + Integer.toString(multipleValues.get(i)) + " ";
 
         }
 
