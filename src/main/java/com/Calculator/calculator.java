@@ -3,6 +3,7 @@ package com.Calculator;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.Math;
+import java.util.ArrayList; // import the ArrayList class
 
 
 public class calculator {
@@ -232,6 +233,52 @@ public class calculator {
 
     }
 
+    public static String checkMultiples(double[] numbers) {
+
+
+        double num = numbers[0];
+        String output = ""; // def
+        ArrayList<Integer> multipleValues = new ArrayList<Integer>();
+
+        int count = 1;  //def
+
+
+        while (count < num) {   //use
+
+            if (num % count == 0) { //use
+
+                multipleValues.add(count);  //use
+
+            }
+
+            count++;    //def
+
+        }
+
+//      //Output
+        output = num + " is a multiple of: "; //def
+
+        // Iterating using for loop
+        for (int i = 0; i < multipleValues.size(); i++){
+
+            // Printing and display the elements in ArrayList
+            output = output + " " + Integer.toString(multipleValues.get(i)) + " "; //def
+
+        }
+
+
+
+
+        return output;
+
+
+    }
+
+
+
+
+
+
     public static String doOperation(String option, double[] numbers ){
         option = option.toLowerCase();
         double answer;
@@ -286,6 +333,8 @@ public class calculator {
                 return(checkRightTriangle(numbers));
             case("check number type"):
                 return(checkNumberType(numbers));
+            case("check multiples"):
+                return(checkMultiples(numbers));
             default:
                 return ("error");
 
@@ -327,7 +376,7 @@ public class calculator {
 
         Scanner numberOfNumbers = new Scanner(System.in);
 
-        if(option.equals("degrees to radians") || option.equals("check number type")){
+        if(option.equals("degrees to radians") || option.equals("check number type")  || option.equals("check multiples")){
             System.out.println("PLEASE ENTER A NUMBER: ");
             amountOfNumbers = 1;
         }
