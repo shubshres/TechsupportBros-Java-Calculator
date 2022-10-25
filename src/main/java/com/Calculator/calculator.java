@@ -176,17 +176,17 @@ public class calculator {
 
             // Check if C is hypotenuse
             if(a*a + b*b == c*c){
-                return("Yes it is a right triangle and C (third side) is the hypotenuse");
+                return("Right triangle - Third side is hypotenuse");
             }
 
             // Check if B is hypotenuse
             if(a*a + c*c == b*b){
-                return("Yes it is a right triangle and B (second side) is the hypotenuse");
+                return("Right triangle - Second side is hypotenuse");
             }
 
             // Check if A is hypotenuse
             if(b*b + c*c == a*a){
-                return("Yes it is a right triangle and A (first side) is the hypotenuse");
+                return("Right triangle - First side is hypotenuse");
             }
 
             return("This is NOT a right triangle");
@@ -196,7 +196,7 @@ public class calculator {
         }
         else{
 
-            return ("Invalid input - Not all sides have a length greater than 0");
+            return ("Invalid input - Sides must have a length greater than 0");
         }
 
     }
@@ -220,7 +220,7 @@ public class calculator {
             }
             // check if number is negative, if it is negative it is an integer
             else{
-                return("The number " + " is an integer");
+                return("The number " + num + " is an integer");
             }
 
         }
