@@ -310,7 +310,7 @@ public class calculator {
 
                 if (lengthOfInt == 1) {
 
-                    return ("This number is single digit, positive, and even number");
+                    return ("This number is a single digit, positive, and even number");
                 } else {
 
                     return ("This number is a " + lengthOfInt + " digit, positive, and even number");
@@ -321,7 +321,7 @@ public class calculator {
 
                 if (lengthOfInt == 1) {
 
-                    return ("This number is single digit, positive, and odd number");
+                    return ("This number is a single digit, positive, and odd number");
                 } else {
 
                     return ("This number is a " + lengthOfInt + " digit, positive, and odd number");
@@ -335,7 +335,7 @@ public class calculator {
 
                 if (lengthOfInt == 1) {
 
-                    return ("This number is single digit, negative, and even number");
+                    return ("This number is a single digit, negative, and even number");
                 } else {
 
                     return ("This number is a " + lengthOfInt + " digit, negative, and even number");
@@ -345,7 +345,7 @@ public class calculator {
             } else {
                 if (lengthOfInt == 1) {
 
-                    return ("This number is single digit, negative, and odd number");
+                    return ("This number is a single digit, negative, and odd number");
                 } else {
 
                     return ("This number is a " + lengthOfInt + " digit, negative, and odd number");
@@ -353,7 +353,7 @@ public class calculator {
             }
         } else {
 
-            return ("The number is not negative or positive number");
+            return ("This number is not negative or positive");
         }
     }
 

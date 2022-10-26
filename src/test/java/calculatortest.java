@@ -379,89 +379,103 @@ public class calculatortest {
         assertEquals("The integer 11.0 in Roman Numerals is: XI", c.romanNumerals(num));
     }
 
+
+
+    // -------------------- numberInfo METHOD ------------------------------ //
+
+    // TEST 33: numberInfo
+    // INPUT: 2
+    // EXPECTED OUTPUT: "This number is single digit, positive, and even number"
     @Test
     void test33(){
-        double[] arrayDivide = {-3,-3,-3};
+        double[] num = {2};
         calculator c = new calculator();
-        assertEquals(-0.3333333333333333, c.divide(arrayDivide));
+        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(num));
     }
 
+    // TEST 34: numberInfo
+    // INPUT: 44
+    // EXPECTED OUTPUT: "This number is a 2 digit, positive, and even number"
     @Test
     void test34(){
-        double[] arrayDivide = {2,2,2};
+        double[] num = {44};
         calculator c = new calculator();
-        assertEquals(0.5, c.divide(arrayDivide));
+        assertEquals("This number is a 2 digit, positive, and even number", c.numberInfo(num));
     }
 
+
+    // TEST 35: numberInfo
+    // INPUT: -2
+    // EXPECTED OUTPUT: "This number is a single digit, negative, and even number"
     @Test
     void test35(){
-        double[] arrayDivide = {-1,2,3};
+        double[] num = {-2};
         calculator c = new calculator();
-        assertEquals(-0.16666666666666666, c.divide(arrayDivide));
+        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(num));
     }
+
+    // TEST 36: numberInfo
+    // INPUT: -44
+    // EXPECTED OUTPUT: "This number is a 2 digit, negative, and even number"
 
     @Test
     void test36(){
-        double[] arrayDivide = {1,3,7};
+        double[] num = {-44};
         calculator c = new calculator();
-        assertEquals(0.047619047619047616, c.divide(arrayDivide));
+        assertEquals("This number is a 2 digit, negative, and even number", c.numberInfo(num));
     }
 
+    // TEST 37: numberInfo
+    // INPUT: 1
+    // EXPECTED OUTPUT: "This number is a single digit, positive, and odd number"
     @Test
     void test37(){
-        double[] arrayMean = {2,2};
+        double[] num = {1};
         calculator c = new calculator();
-        assertEquals(2.0, c.mean(arrayMean));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(num));
     }
 
+    // TEST 38: numberInfo
+    // INPUT: 13
+    // EXPECTED OUTPUT: "This number is a 2 digit, positive, and odd number"
     @Test
     void test38(){
-        double[] arrayMean = {1,2};
+        double[] num = {13};
         calculator c = new calculator();
-        assertEquals(1.5, c.mean(arrayMean));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(num));
     }
 
+    // TEST 39: numberInfo
+    // INPUT: -1
+    // EXPECTED OUTPUT: "This number is a single digit, negative, and odd number"
     @Test
     void test39(){
-        double[] arrayMean = {-1,-1};
+        double[] num = {-1};
         calculator c = new calculator();
-        assertEquals(-1.0, c.mean(arrayMean));
+        assertEquals("This number is a single digit, negative, and odd number", c.numberInfo(num));
     }
 
+    // TEST 40: numberInfo
+    // INPUT: -13
+    // EXPECTED OUTPUT: "This number is a 2 digit, negative, and odd number"
     @Test
     void test40(){
-        double[] arrayMean = {-2,-3};
+        double[] num = {-13};
         calculator c = new calculator();
-        assertEquals(-2.5, c.mean(arrayMean));
+        assertEquals("This number is a 2 digit, negative, and odd number", c.numberInfo(num));
     }
 
+    // TEST 41: numberInfo
+    // INPUT: 0
+    // EXPECTED OUTPUT: "This number is not negative or positive"
     @Test
     void test41(){
-        double[] arrayMean = {1,1,1};
+        double[] num = {0};
         calculator c = new calculator();
-        assertEquals(1.0, c.mean(arrayMean));
+        assertEquals("This number is not negative or positive", c.numberInfo(num));
     }
 
-    @Test
-    void test42(){
-        double[] arrayMean = {1,2,3};
-        calculator c = new calculator();
-        assertEquals(2.0, c.mean(arrayMean));
-    }
 
-    @Test
-    void test43(){
-        double[] arrayMean = {-1,-1,-1};
-        calculator c = new calculator();
-        assertEquals(-1.0, c.mean(arrayMean));
-    }
-
-    @Test
-    void test44(){
-        double[] arrayMean = {-1,2,8};
-        calculator c = new calculator();
-        assertEquals(3.0, c.mean(arrayMean));
-    }
 
 
 
