@@ -254,77 +254,129 @@ public class calculatortest {
         assertEquals("10.0 is a multiple of:  1  2  5  10 ", c.checkMultiples(num));
     }
 
-    // TEST 23: MULTIPLY
-    // INPUT: {-3,-3,-3}
-    // EXPECTED OUTPUT: -27.0
+
+
+    // -------------------- checkMultiples METHOD --------- MULTIPLE VALUES VARIABLE ----------------- //
+
+
+
+    // TEST 23: checkMultiples
+    // INPUT: {12}
+    // EXPECTED OUTPUT: "12.0 is a multiple of:  1  2  3  4  6  12 "
     @Test
     void test23(){
-        double[] arrayMultiply = {-3,-3,-3};
+        double[] num = {12};
         calculator c = new calculator();
-        assertEquals(-27.0, c.multiply(arrayMultiply));
+        assertEquals("12.0 is a multiple of:  1  2  3  4  6  12 ", c.checkMultiples(num));
     }
 
-    // TEST 24: MULTIPLY
-    // INPUT: {-1,-2,-3}
-    // EXPECTED OUTPUT: -6.0
+    // TEST 24: checkMultiples
+    // INPUT: {15}
+    // EXPECTED OUTPUT: "15.0 is a multiple of:  1  3  5  15 "
     @Test
     void test24(){
-        double[] arrayMultiply = {-1,-2,-3};
+        double[] num = {15};
         calculator c = new calculator();
-        assertEquals(-6.0, c.multiply(arrayMultiply));
+        assertEquals("15.0 is a multiple of:  1  3  5  15 ", c.checkMultiples(num));
     }
 
+
+    // TEST 25: checkMultiples
+    // INPUT: {16}
+    // EXPECTED OUTPUT:"16.0 is a multiple of:  1  2  4  8  16 "
     @Test
     void test25(){
-        double[] arrayMedian = {1,2,3};
+        double[] num = {16};
         calculator c = new calculator();
-        assertEquals(2.0, c.median(arrayMedian));
+        assertEquals("16.0 is a multiple of:  1  2  4  8  16 ", c.checkMultiples(num));
     }
+
+
+    // -------------------- romanNumerals METHOD ---------  VALUES VARIABLE ----------------- //
+
+    // TEST 26: romanNumerals
+    // INPUT: 1
+    // EXPECTED OUTPUT: "The integer 1.0 in Roman Numerals is: I"
     @Test
     void test26(){
-        double[] arrayMedian = {1,1,1};
+        double num = 1;
         calculator c = new calculator();
-        assertEquals(1.0, c.median(arrayMedian));
+        assertEquals("The integer 1.0 in Roman Numerals is: I", c.romanNumerals(num));
     }
 
+
+    // TEST 27: romanNumerals
+    // INPUT: 2
+    // EXPECTED OUTPUT: "The integer 2.0 in Roman Numerals is: II"
     @Test
     void test27(){
-        double[] arrayMedian = {2,2};
+        double num = 2;
         calculator c = new calculator();
-        assertEquals(2.0, c.median(arrayMedian));
+        assertEquals("The integer 2.0 in Roman Numerals is: II", c.romanNumerals(num));
     }
 
+
+    // TEST 28: romanNumerals
+    // INPUT: 3
+    // EXPECTED OUTPUT: "The integer 3.0 in Roman Numerals is: III"
     @Test
     void test28(){
-        double[] arrayMedian = {2,1};
+        double num = 3;
         calculator c = new calculator();
-        assertEquals(1.5, c.median(arrayMedian));
+        assertEquals("The integer 3.0 in Roman Numerals is: III", c.romanNumerals(num));
+
     }
+
+
+    // -------------------- romanNumerals METHOD ---------  originalNum VARIABLE ----------------- //
+
+    // TEST 29: romanNumerals
+    // INPUT: 4
+    // EXPECTED OUTPUT: "The integer 4.0 in Roman Numerals is: IV"
     @Test
     void test29(){
-        double[] arrayDivide = {-1,-1};
+        double num = 4;
         calculator c = new calculator();
-        assertEquals(1.0, c.divide(arrayDivide));
+        assertEquals("The integer 4.0 in Roman Numerals is: IV", c.romanNumerals(num));
     }
+
+
+
+
+    // -------------------- romanNumerals METHOD ---------  romanLetters VARIABLE ----------------- //
+
+    // TEST 30: romanNumerals
+    // INPUT: 7
+    // EXPECTED OUTPUT: "The integer 7.0 in Roman Numerals is: VII"
     @Test
     void test30(){
-        double[] arrayDivide = {1,1};
+        double num = 7;
         calculator c = new calculator();
-        assertEquals(1.0, c.divide(arrayDivide));
+        assertEquals("The integer 7.0 in Roman Numerals is: VII", c.romanNumerals(num));
     }
 
+
+    // -------------------- romanNumerals METHOD ---------  roman VARIABLE ----------------- //
+
+    // TEST 31: romanNumerals
+    // INPUT: 10
+    // EXPECTED OUTPUT: "The integer 10 in Roman Numerals is: X"
     @Test
     void test31(){
-        double[] arrayDivide = {-1,2};
+        double num = 10;
         calculator c = new calculator();
-        assertEquals(-0.5, c.divide(arrayDivide));
+        assertEquals("The integer 10.0 in Roman Numerals is: X", c.romanNumerals(num));
     }
 
+
+    // TEST 32: romanNumerals
+    // INPUT: 11
+    // EXPECTED OUTPUT: "The integer 10 in Roman Numerals is: XI"
     @Test
     void test32(){
-        double[] arrayDivide = {1,2};
+        double num = 11;
         calculator c = new calculator();
-        assertEquals(0.5, c.divide(arrayDivide));
+        assertEquals("The integer 11.0 in Roman Numerals is: XI", c.romanNumerals(num));
     }
 
     @Test
