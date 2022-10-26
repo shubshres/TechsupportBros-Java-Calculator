@@ -239,11 +239,15 @@ public class calculator {
         double num = numbers[0];
         String output = "";
         ArrayList<Integer> multipleValues = new ArrayList<Integer>();
+        
+
+
+
 
         int count = 1;  //def
 
+        while (count <= num) {   //use
 
-        while (count < num) {   //use
 
             if (num % count == 0) { //use
 
@@ -264,8 +268,9 @@ public class calculator {
             // Printing and display the elements in ArrayList
             output = output + " " + Integer.toString(multipleValues.get(i)) + " ";
 
-        }
 
+
+        }
 
 
 
