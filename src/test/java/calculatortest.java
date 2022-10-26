@@ -104,25 +104,32 @@ public class calculatortest {
         assertEquals("This is NOT a right triangle", c.checkRightTriangle(sides));
     }
 
-    // TEST 10: SUBTRACT
-    // INPUT: {1,2}
-    // EXPECTED OUTPUT: -1.0
+
+
+
+// -------------------- checkMultiples METHOD -------------------------- //
+
+    // TEST 10: checkMultiples
+    // INPUT: {0}
+    // EXPECTED OUTPUT: “0.0 is a multiple of: ”
     @Test
     void test10(){
-        double[] arraySubtract = {1,2};
+        double[] num = {0};
         calculator c = new calculator();
-        assertEquals(-1.0, c.subtract(arraySubtract));
+        assertEquals("0.0 is a multiple of: ", c.checkMultiples(num));
     }
 
-    // TEST 11: SUBTRACT
-    // INPUT: {-1,-1}
-    // EXPECTED OUTPUT: -2.0
+    // TEST 11: checkMultiples
+    // INPUT: {2}
+    // EXPECTED OUTPUT: "2.0 is a multiple of:  1  2"
     @Test
     void test11(){
-        double[] arraySubtract = {-1,-1};
+        double[] num = {2};
         calculator c = new calculator();
-        assertEquals(0.0, c.subtract(arraySubtract));
+        assertEquals("2.0 is a multiple of:  1  2 ", c.checkMultiples(num));
     }
+
+    
 
     // TEST 12: SUBTRACT
     // INPUT: {-1,-2}
