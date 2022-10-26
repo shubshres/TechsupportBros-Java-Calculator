@@ -107,7 +107,7 @@ public class calculatortest {
 
 
 
-// -------------------- checkMultiples METHOD -------------------------- //
+// -------------------- checkMultiples METHOD --------- COUNT VARIABLE ----------------- //
 
     // TEST 10: checkMultiples
     // INPUT: {0}
@@ -129,120 +129,129 @@ public class calculatortest {
         assertEquals("2.0 is a multiple of:  1  2 ", c.checkMultiples(num));
     }
 
-    
 
-    // TEST 12: SUBTRACT
-    // INPUT: {-1,-2}
-    // EXPECTED OUTPUT: -3.0
+
+    // TEST 12: checkMultiples
+    // INPUT: {3}
+    // EXPECTED OUTPUT: "3.0 is a multiple of:  1  3 "
     @Test
     void test12(){
-        double[] arraySubtract = {-1,-2};
+        double[] num = {3};
         calculator c = new calculator();
-        assertEquals(1.0, c.subtract(arraySubtract));
+        assertEquals("3.0 is a multiple of:  1  3 ", c.checkMultiples(num));
     }
 
-    // TEST 13: SUBTRACT
-    // INPUT: {5,5,5}
-    // EXPECTED OUTPUT: -5.0
+
+
+    // TEST 13: checkMultiples
+    // INPUT: {4}
+    // EXPECTED OUTPUT: "4.0 is a multiple of:  1  2  4 "
     @Test
     void test13(){
-        double[] arraySubtract = {5,5,5};
+        double[] num = {4};
         calculator c = new calculator();
-        assertEquals(-5.0, c.subtract(arraySubtract));
+        assertEquals("4.0 is a multiple of:  1  2  4 ", c.checkMultiples(num));
     }
 
-    // TEST 14: SUBTRACT
-    // INPUT: {1,2,3}
-    // EXPECTED OUTPUT: -4.0
+    // TEST 14: checkMultiples
+    // INPUT: {5}
+    // EXPECTED OUTPUT: "5.0 is a multiple of:  1  5 "
     @Test
     void test14(){
-        double[] arraySubtract = {1,2,3};
+        double[] num = {5};
         calculator c = new calculator();
-        assertEquals(-4.0, c.subtract(arraySubtract));
+        assertEquals("5.0 is a multiple of:  1  5 ", c.checkMultiples(num));
     }
 
 
-    // TEST 15: SUBTRACT
-    // INPUT: {-3,-3,-3}
-    // EXPECTED OUTPUT: 3
+    // TEST 15: checkMultiples
+    // INPUT: {6}
+    // EXPECTED OUTPUT: "6.0 is a multiple of:  1  2  3  6 "
     @Test
     void test15(){
-        double[] arraySubtract = {-3,-3,-3};
+        double[] num = {6};
         calculator c = new calculator();
-        assertEquals(3.0, c.subtract(arraySubtract));
+        assertEquals("6.0 is a multiple of:  1  2  3  6 ", c.checkMultiples(num));
+
     }
 
-    // TEST 16: SUBTRACT
-    // INPUT: {-1,-2,-3}
-    // EXPECTED OUTPUT: 4
+
+    // -------------------- checkMultiples METHOD --------- NUM VARIABLE ----------------- //
+
+    // TEST 16: checkMultiples
+    // INPUT: {-1}
+    // EXPECTED OUTPUT: "-1.0 is a multiple of: "
     @Test
     void test16(){
-        double[] arraySubtract = {-1,-2,-3};
+        double[] num = {-1};
         calculator c = new calculator();
-        assertEquals(4.0, c.subtract(arraySubtract));
+        assertEquals("-1.0 is a multiple of: ", c.checkMultiples(num));
     }
 
-// -------------------- MULTIPLY METHOD -------------------------- //
 
-    // TEST 17: MULTIPLY
-    // INPUT: {1,1}
-    // EXPECTED OUTPUT: 1
+
+    // TEST 17: checkMultiples
+    // INPUT: {7}
+    // EXPECTED OUTPUT: "7.0 is a multiple of:  1  7 "
     @Test
     void test17(){
-        double[] arrayMultiply = {1,1};
+        double[] num = {7};
         calculator c = new calculator();
-        assertEquals(1.0, c.multiply(arrayMultiply));
+        assertEquals("7.0 is a multiple of:  1  7 ", c.checkMultiples(num));
     }
 
-    // TEST 18: MULTIPLY
-    // INPUT: {1,2}
-    // EXPECTED OUTPUT: 2
+    // TEST 18: checkMultiples
+    // INPUT: {13}
+    // EXPECTED OUTPUT: "13.0 is a multiple of:  1  13 "
     @Test
     void test18(){
-        double[] arrayMultiply = {1,2};
+        double[] num = {13};
         calculator c = new calculator();
-        assertEquals(2.0, c.multiply(arrayMultiply));
+        assertEquals("13.0 is a multiple of:  1  13 ", c.checkMultiples(num));
     }
 
-    // TEST 19: MULTIPLY
-    // INPUT: {-1,-1}
-    // EXPECTED OUTPUT: 1.0
+
+    // -------------------- checkMultiples METHOD --------- OUTPUT VARIABLE ----------------- //
+
+    // TEST 19: checkMultiples
+    // INPUT: {14}
+    // EXPECTED OUTPUT: "14.0 is a multiple of:  1  2  7  14 "
     @Test
     void test19(){
-        double[] arrayMultiply = {-1,-1};
+        double[] num = {14};
         calculator c = new calculator();
-        assertEquals(1.0, c.multiply(arrayMultiply));
+        assertEquals("14.0 is a multiple of:  1  2  7  14 ", c.checkMultiples(num));
     }
 
-    // TEST 20: MULTIPLY
-    // INPUT: {-1,-2}
-    // EXPECTED OUTPUT: 2.0
+    // TEST 20: checkMultiples
+    // INPUT: {8}
+    // EXPECTED OUTPUT: "8.0 is a multiple of:  1  2  4  8 "
     @Test
     void test20(){
-        double[] arrayMultiply = {-1,-2};
+        double[] num = {8};
         calculator c = new calculator();
-        assertEquals(2.0, c.multiply(arrayMultiply));
+        assertEquals("8.0 is a multiple of:  1  2  4  8 ", c.checkMultiples(num));
     }
 
 
-    // TEST 21: MULTIPLY
-    // INPUT: {5,5,5}
-    // EXPECTED OUTPUT: 125.0
+    // TEST 21: checkMultiples
+    // INPUT: {9}
+    // EXPECTED OUTPUT: ":9.0 is a multiple of:  1  3  9 "
     @Test
     void test21(){
-        double[] arrayMultiply = {5,5,5};
+        double[] num = {9};
         calculator c = new calculator();
-        assertEquals(125.0, c.multiply(arrayMultiply));
+        assertEquals("9.0 is a multiple of:  1  3  9 ", c.checkMultiples(num));
     }
 
-    // TEST 22: MULTIPLY
-    // INPUT: {1,2,3}
-    // EXPECTED OUTPUT: 6
+    // TEST 22: checkMultiples
+    // INPUT: {10}
+    // EXPECTED OUTPUT: "10.0 is a multiple of:  1  2  5  10 "
     @Test
     void test22(){
-        double[] arrayMultiply = {1,2,3};
+        double[] num = {10};
         calculator c = new calculator();
-        assertEquals(6.0, c.multiply(arrayMultiply));
+        assertEquals("10.0 is a multiple of:  1  2  5  10 ", c.checkMultiples(num));
     }
 
     // TEST 23: MULTIPLY
