@@ -452,6 +452,14 @@ public class calculator {
                 System.out.println("\n\tmod:\n\t\tThis will you to find the modulos between two numbers");
                 System.out.println("\n\troot:\n\t\tThis will you to nth-root using two numbers");
                 System.out.println("\n\tdegrees to radians:\n\t\tThis will you to convert degrees to radians");
+                // New methods
+                System.out.println("\n\tcheck right triangle:\n\t\tThis will you allow you to check if three sides make up a right triangle ");
+                System.out.println("\n\tcheck number type:\n\t\tThis function checks if a number is a rational, whole, natural, or an integer ");
+                System.out.println("\n\tcheck multiples:\n\t\tThis function returns all the numbers the input is a multiple of ");
+                System.out.println("\n\troman numerals:\n\t\tThis function converts a number to roman numerals");
+                System.out.println("\n\tnumber info:\n\t\tThis function displays information about a given number");
+
+
                 System.out.println("PLEASE ENTER WHAT OPERATION YOU WOULD LIKE TO DO: ");
                 System.out.println("Type \"help\" to see options");
                 option = operation.next();
