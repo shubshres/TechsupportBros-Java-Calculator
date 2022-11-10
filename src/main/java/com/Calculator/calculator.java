@@ -188,9 +188,13 @@ public class calculator {
             return ("This is NOT a right triangle");
 
 
-        } else {
+        } else if (a < 0 || b < 0 || c < 0){
 
             return ("Invalid input - Sides must have a length greater than 0");
+        }
+        else{
+
+            return("");
         }
 
     }
