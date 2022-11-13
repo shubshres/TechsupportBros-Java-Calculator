@@ -308,57 +308,56 @@ public class calculator {
         }
 
 
-        if (num > 0) {
+        //refactoring the code
 
-            if (num % 2 == 0) {
+        if( (num > 0) && (num % 2 == 0) && (lengthOfInt == 1) ){
 
-                if (lengthOfInt == 1) {
+            return ("This number is a single digit, positive, and even number");
 
-                    return ("This number is a single digit, positive, and even number");
-                } else {
+        } else if( (num > 0) && (num % 2 == 0) && (lengthOfInt > 1) ){
 
-                    return ("This number is a " + lengthOfInt + " digit, positive, and even number");
-                }
+            return ("This number is a " + lengthOfInt + " digit, positive, and even number");
 
+        } else if( (num > 0) && (num % 2 != 0) && (lengthOfInt == 1) ){
 
-            } else {
+            return ("This number is a single digit, positive, and odd number");
 
-                if (lengthOfInt == 1) {
+        } else if( (num > 0) && (num % 2 != 0) && (lengthOfInt > 1) ){
 
-                    return ("This number is a single digit, positive, and odd number");
-                } else {
+            return ("This number is a " + lengthOfInt + " digit, positive, and odd number");
 
-                    return ("This number is a " + lengthOfInt + " digit, positive, and odd number");
-                }
+        } else if( (num < 0) && (num % 2 == 0) && (lengthOfInt == 1) ){
 
+            return ("This number is a single digit, negative, and even number");
 
-            }
+        } else if( (num < 0) && (num % 2 == 0) && (lengthOfInt > 1) ){
 
-        } else if (num < 0) {
-            if (num % 2 == 0) {
+            return ("This number is a " + lengthOfInt + " digit, negative, and even number");
 
-                if (lengthOfInt == 1) {
+        } else if( (num < 0) && (num % 2 != 0) && (lengthOfInt == 1) ){
 
-                    return ("This number is a single digit, negative, and even number");
-                } else {
+            return ("This number is a single digit, negative, and odd number");
 
-                    return ("This number is a " + lengthOfInt + " digit, negative, and even number");
-                }
+        } else if( (num < 0) && (num % 2 != 0) && (lengthOfInt > 1) ){
 
+            return ("This number is a " + lengthOfInt + " digit, negative, and odd number");
 
-            } else {
-                if (lengthOfInt == 1) {
+        } else if (num == 0){
 
-                    return ("This number is a single digit, negative, and odd number");
-                } else {
+            return ("This number is a not positive or negative");
 
-                    return ("This number is a " + lengthOfInt + " digit, negative, and odd number");
-                }
-            }
-        } else {
-
-            return ("This number is not negative or positive");
         }
+        else{
+
+            return ("Could not be determined");
+        }
+
+
+
+
+
+
+
     }
 
 
