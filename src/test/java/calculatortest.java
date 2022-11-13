@@ -11,21 +11,19 @@ public class calculatortest {
     // INPUT: {5,-1,5}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test1(){
-        double[] sides = {5,-1,5};
+    void test1() {
+        double[] sides = {5, -1, 5};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
-
-
 
 
     // TEST 2: CheckRightTriangle()
     // INPUT: {-3,-4,5}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test2(){
-        double[] sides = {-3,-4,5};
+    void test2() {
+        double[] sides = {-3, -4, 5};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
@@ -34,8 +32,8 @@ public class calculatortest {
     // INPUT: {-2,2,-2}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test3(){
-        double[] sides = {-2,2,-2};
+    void test3() {
+        double[] sides = {-2, 2, -2};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
@@ -44,21 +42,19 @@ public class calculatortest {
     // INPUT: {-1,2,3}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test4(){
-        double[] sides = {-1,2,3};
+    void test4() {
+        double[] sides = {-1, 2, 3};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
-
-
 
 
     // TEST 5: checkRightTriangle
     // INPUT: {-7,5,-7}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test5(){
-        double[] sides = {-7,5,-7};
+    void test5() {
+        double[] sides = {-7, 5, -7};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
@@ -67,8 +63,8 @@ public class calculatortest {
     // INPUT: {2,-4,8}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test6(){
-        double[] sides = {2,-4,8};
+    void test6() {
+        double[] sides = {2, -4, 8};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
@@ -77,8 +73,8 @@ public class calculatortest {
     // INPUT: {3,5,4}
     // EXPECTED OUTPUT: "Right triangle - Second side is hypotenuse"
     @Test
-    void test7(){
-        double[] sides = {3,5,4};
+    void test7() {
+        double[] sides = {3, 5, 4};
         calculator c = new calculator();
         assertEquals("Right triangle - Second side is hypotenuse", c.checkRightTriangle(sides));
     }
@@ -87,396 +83,270 @@ public class calculatortest {
     // INPUT: {7,7,-7}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
-    void test8(){
-        double[] sides = {7,7,-7};
+    void test8() {
+        double[] sides = {7, 7, -7};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
-
 
 
     // TEST 9: checkRightTriangle
     // INPUT: {5,12,13}
     // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
     @Test
-    void test9(){
-        double[] sides = {5,12,13};
+    void test9() {
+        double[] sides = {5, 12, 13};
         calculator c = new calculator();
         assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
     }
 
+    // Predicate Table: 3
 
-
-
-// -------------------- checkMultiples METHOD --------- COUNT VARIABLE ----------------- //
-
-    // TEST 10: checkMultiples
-    // INPUT: {0}
-    // EXPECTED OUTPUT: “0.0 is a multiple of: ”
+    // Row: 8
     @Test
-    void test10(){
-        double[] num = {0};
+    void test13() {
+        double[] numbers = {2};
         calculator c = new calculator();
-        assertEquals("0.0 is a multiple of: ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
     }
 
-    // TEST 11: checkMultiples
-    // INPUT: {2}
-    // EXPECTED OUTPUT: "2.0 is a multiple of:  1  2"
+    // Row: 4
     @Test
-    void test11(){
-        double[] num = {2};
+    void test14() {
+        double[] numbers = {-2};
         calculator c = new calculator();
-        assertEquals("2.0 is a multiple of:  1  2 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
     }
 
-
-
-    // TEST 12: checkMultiples
-    // INPUT: {3}
-    // EXPECTED OUTPUT: "3.0 is a multiple of:  1  3 "
+    // Row: 8
     @Test
-    void test12(){
-        double[] num = {3};
+    void test15() {
+        double[] numbers = {4};
         calculator c = new calculator();
-        assertEquals("3.0 is a multiple of:  1  3 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
     }
 
-
-
-    // TEST 13: checkMultiples
-    // INPUT: {4}
-    // EXPECTED OUTPUT: "4.0 is a multiple of:  1  2  4 "
+    // Row: 6
     @Test
-    void test13(){
-        double[] num = {4};
+    void test16() {
+        double[] numbers = {1};
         calculator c = new calculator();
-        assertEquals("4.0 is a multiple of:  1  2  4 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-    // TEST 14: checkMultiples
-    // INPUT: {5}
-    // EXPECTED OUTPUT: "5.0 is a multiple of:  1  5 "
+    // Row: 8
     @Test
-    void test14(){
-        double[] num = {5};
+    void test17() {
+        double[] numbers = {6};
         calculator c = new calculator();
-        assertEquals("5.0 is a multiple of:  1  5 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
     }
 
-
-    // TEST 15: checkMultiples
-    // INPUT: {6}
-    // EXPECTED OUTPUT: "6.0 is a multiple of:  1  2  3  6 "
+    // Row: 7
     @Test
-    void test15(){
-        double[] num = {6};
+    void test18() {
+        double[] numbers = {282};
         calculator c = new calculator();
-        assertEquals("6.0 is a multiple of:  1  2  3  6 ", c.checkMultiples(num));
-
+        assertEquals("This number is a 3 digit, positive, and even number", c.numberInfo(numbers));
     }
 
+    // Predicate Table: 4
 
-    // -------------------- checkMultiples METHOD --------- NUM VARIABLE ----------------- //
-
-    // TEST 16: checkMultiples
-    // INPUT: {-1}
-    // EXPECTED OUTPUT: "-1.0 is a multiple of: "
+    // Row: 8
     @Test
-    void test16(){
-        double[] num = {-1};
+    void test19() {
+        double[] numbers = {33};
         calculator c = new calculator();
-        assertEquals("-1.0 is a multiple of: ", c.checkMultiples(num));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-
-    // TEST 17: checkMultiples
-    // INPUT: {7}
-    // EXPECTED OUTPUT: "7.0 is a multiple of:  1  7 "
+    // Row: 4
     @Test
-    void test17(){
-        double[] num = {7};
+    void test20() {
+        double[] numbers = {-23};
         calculator c = new calculator();
-        assertEquals("7.0 is a multiple of:  1  7 ", c.checkMultiples(num));
+        assertEquals("This number is a 2 digit, negative, and odd number", c.numberInfo(numbers));
     }
 
-    // TEST 18: checkMultiples
-    // INPUT: {13}
-    // EXPECTED OUTPUT: "13.0 is a multiple of:  1  13 "
+    // Row: 8
     @Test
-    void test18(){
-        double[] num = {13};
+    void test21() {
+        double[] numbers = {37};
         calculator c = new calculator();
-        assertEquals("13.0 is a multiple of:  1  13 ", c.checkMultiples(num));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // -------------------- checkMultiples METHOD --------- OUTPUT VARIABLE ----------------- //
-
-    // TEST 19: checkMultiples
-    // INPUT: {14}
-    // EXPECTED OUTPUT: "14.0 is a multiple of:  1  2  7  14 "
+    // Row: 6
     @Test
-    void test19(){
-        double[] num = {14};
+    void test22() {
+        double[] numbers = {24};
         calculator c = new calculator();
-        assertEquals("14.0 is a multiple of:  1  2  7  14 ", c.checkMultiples(num));
+        assertEquals("This number is a 2 digit, positive, and even number", c.numberInfo(numbers));
     }
 
-    // TEST 20: checkMultiples
-    // INPUT: {8}
-    // EXPECTED OUTPUT: "8.0 is a multiple of:  1  2  4  8 "
+    // Row: 8
     @Test
-    void test20(){
-        double[] num = {8};
+    void test23() {
+        double[] numbers = {87};
         calculator c = new calculator();
-        assertEquals("8.0 is a multiple of:  1  2  4  8 ", c.checkMultiples(num));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // TEST 21: checkMultiples
-    // INPUT: {9}
-    // EXPECTED OUTPUT: ":9.0 is a multiple of:  1  3  9 "
+    // Row: 7
     @Test
-    void test21(){
-        double[] num = {9};
+    void test24() {
+        double[] numbers = {3};
         calculator c = new calculator();
-        assertEquals("9.0 is a multiple of:  1  3  9 ", c.checkMultiples(num));
-    }
-
-    // TEST 22: checkMultiples
-    // INPUT: {10}
-    // EXPECTED OUTPUT: "10.0 is a multiple of:  1  2  5  10 "
-    @Test
-    void test22(){
-        double[] num = {10};
-        calculator c = new calculator();
-        assertEquals("10.0 is a multiple of:  1  2  5  10 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
     }
 
 
 
-    // -------------------- checkMultiples METHOD --------- MULTIPLE VALUES VARIABLE ----------------- //
+    // Predicate Table: 5
 
-
-
-    // TEST 23: checkMultiples
-    // INPUT: {12}
-    // EXPECTED OUTPUT: "12.0 is a multiple of:  1  2  3  4  6  12 "
+    // Row: 8
     @Test
-    void test23(){
-        double[] num = {12};
+    void test25() {
+        double[] numbers = {5};
         calculator c = new calculator();
-        assertEquals("12.0 is a multiple of:  1  2  3  4  6  12 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-    // TEST 24: checkMultiples
-    // INPUT: {15}
-    // EXPECTED OUTPUT: "15.0 is a multiple of:  1  3  5  15 "
+    // Row: 4
     @Test
-    void test24(){
-        double[] num = {15};
+    void test26() {
+        double[] numbers = {-1};
         calculator c = new calculator();
-        assertEquals("15.0 is a multiple of:  1  3  5  15 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, negative, and odd number", c.numberInfo(numbers));
     }
 
-
-    // TEST 25: checkMultiples
-    // INPUT: {16}
-    // EXPECTED OUTPUT:"16.0 is a multiple of:  1  2  4  8  16 "
+    // Row: 8
     @Test
-    void test25(){
-        double[] num = {16};
+    void test27() {
+        double[] numbers = {7};
         calculator c = new calculator();
-        assertEquals("16.0 is a multiple of:  1  2  4  8  16 ", c.checkMultiples(num));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // -------------------- romanNumerals METHOD ---------  VALUES VARIABLE ----------------- //
-
-    // TEST 26: romanNumerals
-    // INPUT: 1
-    // EXPECTED OUTPUT: "The integer 1.0 in Roman Numerals is: I"
+    // Row: 6
     @Test
-    void test26(){
-        double num = 1;
+    void test28() {
+        double[] numbers = {8};
         calculator c = new calculator();
-        assertEquals("The integer 1.0 in Roman Numerals is: I", c.romanNumerals(num));
+        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
     }
 
-
-    // TEST 27: romanNumerals
-    // INPUT: 2
-    // EXPECTED OUTPUT: "The integer 2.0 in Roman Numerals is: II"
+    // Row: 8
     @Test
-    void test27(){
-        double num = 2;
+    void test29() {
+        double[] numbers = {9};
         calculator c = new calculator();
-        assertEquals("The integer 2.0 in Roman Numerals is: II", c.romanNumerals(num));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // TEST 28: romanNumerals
-    // INPUT: 3
-    // EXPECTED OUTPUT: "The integer 3.0 in Roman Numerals is: III"
+    // Row: 7
     @Test
-    void test28(){
-        double num = 3;
+    void test30() {
+        double[] numbers = {73};
         calculator c = new calculator();
-        assertEquals("The integer 3.0 in Roman Numerals is: III", c.romanNumerals(num));
-
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // -------------------- romanNumerals METHOD ---------  originalNum VARIABLE ----------------- //
-
-    // TEST 29: romanNumerals
-    // INPUT: 4
-    // EXPECTED OUTPUT: "The integer 4.0 in Roman Numerals is: IV"
+    // Predicate Table: 6
+    // Row: 8
     @Test
-    void test29(){
-        double num = 4;
+    void test31() {
+        double[] numbers = {57};
         calculator c = new calculator();
-        assertEquals("The integer 4.0 in Roman Numerals is: IV", c.romanNumerals(num));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-
-
-    // -------------------- romanNumerals METHOD ---------  romanLetters VARIABLE ----------------- //
-
-    // TEST 30: romanNumerals
-    // INPUT: 7
-    // EXPECTED OUTPUT: "The integer 7.0 in Roman Numerals is: VII"
+    // Row: 4
     @Test
-    void test30(){
-        double num = 7;
+    void test32() {
+        double[] numbers = {-67};
         calculator c = new calculator();
-        assertEquals("The integer 7.0 in Roman Numerals is: VII", c.romanNumerals(num));
+        assertEquals("This number is a 2 digit, negative, and odd number", c.numberInfo(numbers));
     }
 
-
-    // -------------------- romanNumerals METHOD ---------  roman VARIABLE ----------------- //
-
-    // TEST 31: romanNumerals
-    // INPUT: 10
-    // EXPECTED OUTPUT: "The integer 10 in Roman Numerals is: X"
+    // Row: 8
     @Test
-    void test31(){
-        double num = 10;
+    void test33() {
+        double[] numbers = {83};
         calculator c = new calculator();
-        assertEquals("The integer 10.0 in Roman Numerals is: X", c.romanNumerals(num));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // TEST 32: romanNumerals
-    // INPUT: 11
-    // EXPECTED OUTPUT: "The integer 10 in Roman Numerals is: XI"
+    // Row: 6
     @Test
-    void test32(){
-        double num = 11;
+    void test34() {
+        double[] numbers = {382};
         calculator c = new calculator();
-        assertEquals("The integer 11.0 in Roman Numerals is: XI", c.romanNumerals(num));
+        assertEquals("This number is a 3 digit, positive, and even number", c.numberInfo(numbers));
     }
 
-
-
-    // -------------------- numberInfo METHOD ------------------------------ //
-
-    // TEST 33: numberInfo
-    // INPUT: 2
-    // EXPECTED OUTPUT: "This number is single digit, positive, and even number"
+    // Row: 8
     @Test
-    void test33(){
-        double[] num = {2};
+    void test35() {
+        double[] numbers = {71};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(num));
+        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-    // TEST 34: numberInfo
-    // INPUT: 44
-    // EXPECTED OUTPUT: "This number is a 2 digit, positive, and even number"
+    // Row: 7
     @Test
-    void test34(){
-        double[] num = {44};
+    void test36() {
+        double[] numbers = {7};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and even number", c.numberInfo(num));
+        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
     }
 
-
-    // TEST 35: numberInfo
-    // INPUT: -2
-    // EXPECTED OUTPUT: "This number is a single digit, negative, and even number"
+    // Predicate Table: 7
+    // Row: 8
     @Test
-    void test35(){
-        double[] num = {-2};
+    void test37() {
+        double[] numbers = {-8};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(num));
+        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
     }
 
-    // TEST 36: numberInfo
-    // INPUT: -44
-    // EXPECTED OUTPUT: "This number is a 2 digit, negative, and even number"
-
+    // Row: 4
     @Test
-    void test36(){
-        double[] num = {-44};
+    void test38() {
+        double[] numbers = {8};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, negative, and even number", c.numberInfo(num));
+        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
     }
 
-    // TEST 37: numberInfo
-    // INPUT: 1
-    // EXPECTED OUTPUT: "This number is a single digit, positive, and odd number"
+    // Row: 8
     @Test
-    void test37(){
-        double[] num = {1};
+    void test39() {
+        double[] numbers = {-4};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(num));
+        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
     }
 
-    // TEST 38: numberInfo
-    // INPUT: 13
-    // EXPECTED OUTPUT: "This number is a 2 digit, positive, and odd number"
+    // Row: 6
     @Test
-    void test38(){
-        double[] num = {13};
+    void test40() {
+        double[] numbers = {-3};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(num));
+        assertEquals("This number is a single digit, negative, and odd number", c.numberInfo(numbers));
     }
 
-    // TEST 39: numberInfo
-    // INPUT: -1
-    // EXPECTED OUTPUT: "This number is a single digit, negative, and odd number"
+    // Row: 8
     @Test
-    void test39(){
-        double[] num = {-1};
+    void test41() {
+        double[] numbers = {-6};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and odd number", c.numberInfo(num));
+        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
     }
 
-    // TEST 40: numberInfo
-    // INPUT: -13
-    // EXPECTED OUTPUT: "This number is a 2 digit, negative, and odd number"
+    // Row: 7
     @Test
-    void test40(){
-        double[] num = {-13};
+    void test42() {
+        double[] numbers = {-1234};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, negative, and odd number", c.numberInfo(num));
+        assertEquals("This number is a 4 digit, negative, and even number", c.numberInfo(numbers));
     }
-
-    // TEST 41: numberInfo
-    // INPUT: 0
-    // EXPECTED OUTPUT: "This number is not negative or positive"
-    @Test
-    void test41(){
-        double[] num = {0};
-        calculator c = new calculator();
-        assertEquals("This number is not negative or positive", c.numberInfo(num));
-    }
-
-
-
-
 }
