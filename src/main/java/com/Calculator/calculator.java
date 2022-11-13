@@ -190,7 +190,7 @@ public class calculator {
 
         } else if (a < 0 || b < 0 || c < 0){
 
-            return ("Invalid input - Sides must have a length greater than 0");
+            return ("Invalid Input");
         }
         else{
 

@@ -5,71 +5,72 @@ import org.junit.jupiter.api.Test;
 public class calculatortest {
 
 
-    // -------------------- checkNumberType METHOD -------------------------- //
+    // -------------------- CheckRightTriangle() METHOD -------------------------- //
 
-    // TEST 1: checkNumberType
-    // INPUT: {5}
-    // EXPECTED OUTPUT: "The number 5.0 is a natural number"
+    // TEST 1: CheckRightTriangle()
+    // INPUT: {5,-1,5}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test1(){
-        double[] num = {5};
+        double[] sides = {5,-1,5};
         calculator c = new calculator();
-        assertEquals("The number 5.0 is a natural number", c.checkNumberType(num));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
-    // TEST 2: checkNumberType
-    // INPUT: {0}
-    // EXPECTED OUTPUT: "The number 0.0 is a whole number, but NOT an integer"
+
+
+
+    // TEST 2: CheckRightTriangle()
+    // INPUT: {-3,-4,5}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test2(){
-        double[] num = {0};
+        double[] sides = {-3,-4,5};
         calculator c = new calculator();
-        assertEquals("The number 0.0 is a whole number, but NOT an integer", c.checkNumberType(num));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
-    // TEST 3: checkNumberType
-    // INPUT: {-5}
-    // EXPECTED OUTPUT:
+    // TEST 3: CheckRightTriangle()
+    // INPUT: {-2,2,-2}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test3(){
-        double[] num = {-5};
+        double[] sides = {-2,2,-2};
         calculator c = new calculator();
-        assertEquals("The number -5.0 is an integer", c.checkNumberType(num));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
-    // TEST 4: checkNumberType
-    // INPUT: {9.5}
-    // EXPECTED OUTPUT: "The number 9.5 is rational"
+    // TEST 4: CheckRightTriangle()
+    // INPUT: {-1,2,3}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test4(){
-        double[] num = {9.5};
+        double[] sides = {-1,2,3};
         calculator c = new calculator();
-        assertEquals("The number 9.5 is rational", c.checkNumberType(num));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
-
-    // -------------------- checkRightTriangle METHOD -------------------------- //
 
 
 
     // TEST 5: checkRightTriangle
-    // INPUT: {3,4,-5}
-    // EXPECTED OUTPUT: "Invalid input - Sides must have a length greater than 0"
+    // INPUT: {-7,5,-7}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test5(){
-        double[] sides = {3,4,-5};
+        double[] sides = {-7,5,-7};
         calculator c = new calculator();
-        assertEquals("Invalid input - Sides must have a length greater than 0", c.checkRightTriangle(sides));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
     // TEST 6: checkRightTriangle
-    // INPUT: {3,4,5}
-    // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
+    // INPUT: {2,-4,8}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test6(){
-        double[] sides = {3,4,5};
+        double[] sides = {2,-4,8};
         calculator c = new calculator();
-        assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
     // TEST 7: checkRightTriangle
@@ -83,25 +84,25 @@ public class calculatortest {
     }
 
     // TEST 8: checkRightTriangle
-    // INPUT: {5,3,4}
-    // EXPECTED OUTPUT: "Right triangle - First side is hypotenuse"
+    // INPUT: {7,7,-7}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test8(){
-        double[] sides = {5,3,4};
+        double[] sides = {7,7,-7};
         calculator c = new calculator();
-        assertEquals("Right triangle - First side is hypotenuse", c.checkRightTriangle(sides));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
 
 
     // TEST 9: checkRightTriangle
-    // INPUT: {1,1,1}
-    // EXPECTED OUTPUT: "This is NOT a right triangle"
+    // INPUT: {5,12,13}
+    // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
     @Test
     void test9(){
-        double[] sides = {1,1,1};
+        double[] sides = {5,12,13};
         calculator c = new calculator();
-        assertEquals("This is NOT a right triangle", c.checkRightTriangle(sides));
+        assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
     }
 
 
