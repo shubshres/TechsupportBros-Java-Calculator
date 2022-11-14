@@ -8,30 +8,30 @@ public class calculatortest {
     // -------------------- CheckRightTriangle() METHOD -------------------------- //
 
     // TEST 1: CheckRightTriangle()
-    // INPUT: {5,-1,5}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // INPUT: {3,4,5}
+    // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
     @Test
     void test1(){
-        double[] sides = {5,-1,5};
+        double[] sides = {3,4,5};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+        assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
     }
 
 
 
 
     // TEST 2: CheckRightTriangle()
-    // INPUT: {-3,-4,5}
+    // INPUT: {-3,4,5}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test2(){
-        double[] sides = {-3,-4,5};
+        double[] sides = {-3,4,5};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
     // TEST 3: CheckRightTriangle()
-    // INPUT: {-2,2,-2}
+    // INPUT: {2,2,2}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test3(){
@@ -112,7 +112,7 @@ public class calculatortest {
 
     // TEST 10: checkMultiples
     // INPUT: {0}
-    // EXPECTED OUTPUT: “0.0 is a multiple of: ”
+    // EXPECTED OUTPUT: “0.0 is a multiple of:
     @Test
     void test10(){
         double[] num = {0};
@@ -122,7 +122,7 @@ public class calculatortest {
 
     // TEST 11: checkMultiples
     // INPUT: {2}
-    // EXPECTED OUTPUT: "2.0 is a multiple of:  1  2"
+    // EXPECTED OUTPUT: "2.0 is a multiple of:  1  2
     @Test
     void test11(){
         double[] num = {2};
@@ -473,7 +473,7 @@ public class calculatortest {
     void test41(){
         double[] num = {0};
         calculator c = new calculator();
-        assertEquals("This number is not negative or positive", c.numberInfo(num));
+        assertEquals("This number is not positive or negative", c.numberInfo(num));
     }
 
 

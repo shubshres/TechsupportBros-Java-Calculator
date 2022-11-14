@@ -344,7 +344,7 @@ public class calculator {
 
         } else if (num == 0){
 
-            return ("This number is a not positive or negative");
+            return ("This number is not positive or negative");
 
         }
         else{
