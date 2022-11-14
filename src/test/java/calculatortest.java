@@ -8,55 +8,55 @@ public class calculatortest {
     // -------------------- CheckRightTriangle() METHOD -------------------------- //
 
     // TEST 1: CheckRightTriangle()
-    // INPUT: {5,-1,5}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // INPUT: {3,4,5}
+    // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
     @Test
     void test1() {
-        double[] sides = {5, -1, 5};
+        double[] sides = {3, 4, 5};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+        assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
     }
 
 
     // TEST 2: CheckRightTriangle()
-    // INPUT: {-3,-4,5}
+    // INPUT: {5,13,12}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test2() {
-        double[] sides = {-3, -4, 5};
+        double[] sides = {-3, 4, 5};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
     // TEST 3: CheckRightTriangle()
-    // INPUT: {-2,2,-2}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // INPUT: {5,13,12}
+    // EXPECTED OUTPUT: "Right triangle - Second side is hypotenuse"
     @Test
     void test3() {
-        double[] sides = {-2, 2, -2};
+        double[] sides = {5, 13, 12};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+        assertEquals("Right triangle - Second side is hypotenuse", c.checkRightTriangle(sides));
     }
 
     // TEST 4: CheckRightTriangle()
-    // INPUT: {-1,2,3}
+    // INPUT: {5,-13,12}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test4() {
-        double[] sides = {-1, 2, 3};
+        double[] sides = {5, -13, 12};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
 
     // TEST 5: checkRightTriangle
-    // INPUT: {-7,5,-7}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // INPUT: {7,5,7}
+    // EXPECTED OUTPUT: "This is NOT a right triangle"
     @Test
     void test5() {
-        double[] sides = {-7, 5, -7};
+        double[] sides = {7, 5, 7};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+        assertEquals("This is NOT a right triangle", c.checkRightTriangle(sides));
     }
 
     // TEST 6: checkRightTriangle
@@ -70,35 +70,68 @@ public class calculatortest {
     }
 
     // TEST 7: checkRightTriangle
-    // INPUT: {3,5,4}
-    // EXPECTED OUTPUT: "Right triangle - Second side is hypotenuse"
+    // INPUT: {-5,12,13}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test7() {
-        double[] sides = {3, 5, 4};
+        double[] sides = {-5, 12, 13};
         calculator c = new calculator();
-        assertEquals("Right triangle - Second side is hypotenuse", c.checkRightTriangle(sides));
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
     // TEST 8: checkRightTriangle
-    // INPUT: {7,7,-7}
+    // INPUT: {-7,7,7}
     // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test8() {
-        double[] sides = {7, 7, -7};
+        double[] sides = {-7, 7, 7};
         calculator c = new calculator();
         assertEquals("Invalid Input", c.checkRightTriangle(sides));
     }
 
 
     // TEST 9: checkRightTriangle
-    // INPUT: {5,12,13}
-    // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
+    // INPUT: {5,-5,5}
+    // EXPECTED OUTPUT: "Invalid Input"
     @Test
     void test9() {
-        double[] sides = {5, 12, 13};
+        double[] sides = {5, -5, 5};
+        calculator c = new calculator();
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+    }
+
+
+
+    // TEST 10
+
+    @Test
+    void test10() {
+        double[] sides = {10, 6, 8};
+        calculator c = new calculator();
+        assertEquals("Right triangle - First side is hypotenuse", c.checkRightTriangle(sides));
+    }
+
+    // TEST 11
+
+    @Test
+    void test11() {
+        double[] sides = {10, 6, -8};
+        calculator c = new calculator();
+        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+    }
+
+    // TEST 12
+
+    @Test
+    void test12() {
+        double[] sides = {9, 12, 15};
         calculator c = new calculator();
         assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
     }
+
+
+
+
 
     // Predicate Table: 3
 
