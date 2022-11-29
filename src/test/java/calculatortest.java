@@ -7,14 +7,19 @@ public class calculatortest {
 
     // -------------------- CheckRightTriangle() METHOD -------------------------- //
 
-    // TEST 1: CheckRightTriangle()
-    // INPUT: {3,4,5}
-    // EXPECTED OUTPUT: "Right triangle - Third side is hypotenuse"
+    // TEST 1: add()
+    // INPUT: {1,2,3}
+    // NORMAL OUTPUT: 6
+    // MUTANT OUTPUT: -6
     @Test
     void test1() {
-        double[] sides = {3, 4, 5};
+        double[] numbers = {1, 2, 3};
         calculator c = new calculator();
-        assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
+
+        double normalOutput = c.add(numbers);
+        double mutantOutput = c.addMutant1(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
 
