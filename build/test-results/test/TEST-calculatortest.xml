@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="calculatortest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-29T00:22:48" hostname="Mohammeds-MBP" time="0.014">
+<testsuite name="calculatortest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-29T01:23:55" hostname="Mohammeds-MBP" time="0.014">
   <properties/>
-  <testcase name="test1()" classname="calculatortest" time="0.014"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="test3()" classname="calculatortest" time="0.014"/>
+  <system-out><![CDATA[6.0
+0.0
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

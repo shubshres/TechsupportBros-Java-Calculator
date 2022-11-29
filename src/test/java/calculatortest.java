@@ -23,34 +23,47 @@ public class calculatortest {
     }
 
 
-    // TEST 2: CheckRightTriangle()
-    // INPUT: {5,13,12}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // TEST 2: add()
+    // INPUT: {1,2,0}
+    // NORMAL OUTPUT: 3
+    // MUTANT OUTPUT: 0
     @Test
     void test2() {
-        double[] sides = {-3, 4, 5};
+
+        double[] numbers = {1, 2, 0};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+
+        double normalOutput = c.add(numbers);
+        double mutantOutput = c.addMutant2(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
+
     }
 
-    // TEST 3: CheckRightTriangle()
-    // INPUT: {5,13,12}
-    // EXPECTED OUTPUT: "Right triangle - Second side is hypotenuse"
+    // TEST 3: add()
+    // INPUT: {3,2,1}
+    // NORMAL OUTPUT: 6
+    // MUTANT OUTPUT: 0
     @Test
     void test3() {
-        double[] sides = {5, 13, 12};
+
+        double[] numbers = {3, 2, 1};
         calculator c = new calculator();
-        assertEquals("Right triangle - Second side is hypotenuse", c.checkRightTriangle(sides));
+
+        double normalOutput = c.add(numbers);
+        double mutantOutput = c.addMutant3(numbers);
+
+        // System.out.println(c.add(numbers));
+        // System.out.println(c.addMutant3(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
     }
 
-    // TEST 4: CheckRightTriangle()
-    // INPUT: {5,-13,12}
-    // EXPECTED OUTPUT: "Invalid Input"
+
     @Test
     void test4() {
-        double[] sides = {5, -13, 12};
-        calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+        
     }
 
 

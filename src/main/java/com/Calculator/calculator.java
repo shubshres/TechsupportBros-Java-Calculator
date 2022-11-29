@@ -27,6 +27,26 @@ public class calculator {
         return (total);
     }
 
+    public static double addMutant2(double[] numbers) {
+        double total = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total *= numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double addMutant3(double[] numbers) {
+        double total = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total /= numbers[i];
+        }
+
+        return (total);
+    }
+
     public static double multiply(double[] numbers) {
         double total = 1;
 
