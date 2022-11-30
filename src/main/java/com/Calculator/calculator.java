@@ -144,7 +144,7 @@ public class calculator {
     }
 
 
-
+    // ------------------ DIVIDE METHOD FUNCTIONS ------------------------------------
 
 
     public static double divide(double[] numbers) {
@@ -157,6 +157,63 @@ public class calculator {
         return (total);
     }
 
+
+    public static double divideMutant1(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i > numbers.length; i++) {
+            total = total / numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double divideMutant2(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total = total * numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double divideMutant3(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total = total + numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double divideMutant4(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total = total - numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double divideMutant5(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total = total % numbers[i];
+        }
+
+        return (total);
+    }
+
+
+
+
+    // ------------------ SUBTRACT METHOD FUNCTIONS ------------------------------------
+
+
     public static double subtract(double[] numbers) {
         double total = numbers[0];
 
@@ -166,6 +223,88 @@ public class calculator {
 
         return (total);
     }
+
+    public static double subtractMutant1(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double subtractMutant2(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total = numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double subtractMutant3(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total *= numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double subtractMutant4(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total /= numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double subtractMutant5(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total %= numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double subtractMutant6(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 0; i < numbers.length; i++) {
+            total -= numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double subtractMutant7(double[] numbers) {
+        double total = numbers[0];
+
+        for (int i = 1; i > numbers.length; i++) {
+            total -= numbers[i];
+        }
+
+        return (total);
+    }
+
+
+    public static double subtractMutant8(double[] numbers) {
+        double total = numbers[1];
+
+        for (int i = 1; i < numbers.length; i++) {
+            total -= i;
+        }
+
+        return (total);
+    }
+
 
 
 
@@ -271,6 +410,10 @@ public class calculator {
         return (mean);
     }
 
+
+
+    // ------------------ MEDIAN FUNCTIONS ------------------------------------
+
     public static double median(double[] numbers) {
         Arrays.sort(numbers);
 
@@ -287,6 +430,147 @@ public class calculator {
             return (median);
         }
     }
+
+
+    public static double medianMutant1(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize * 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] + numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+
+    public static double medianMutant2(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize / 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] + numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+    public static double medianMutant3(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize + 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] + numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+    public static double medianMutant4(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize - 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] + numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+    public static double medianMutant5(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize % 2 == 0) {
+            int middle = numbers.length - 2;
+            double median = (numbers[(middle)] + numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+    public static double medianMutant6(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize % 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] * numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+    public static double medianMutant7(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize % 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] - numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+    public static double medianMutant8(double[] numbers) {
+        Arrays.sort(numbers);
+
+        double arraySize = numbers.length;
+
+        if (arraySize % 2 == 0) {
+            int middle = numbers.length / 2;
+            double median = (numbers[(middle)] / numbers[(middle - 1)]) / 2;
+            return (median);
+        } else {
+            double middle = (numbers.length / 2);
+            double middleCeil = Math.ceil(middle);
+            int median = (int) numbers[(int) middleCeil];
+            return (median);
+        }
+    }
+
+
+    // ----------------------------------------------------------------------
 
     public static double mode(double[] numbers) {
         double max = Arrays.stream(numbers).max().getAsDouble();
