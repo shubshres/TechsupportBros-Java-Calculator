@@ -337,8 +337,8 @@ public class calculatortest {
         double normalOutput = c.mean(numbers);
         double mutantOutput = c.meanMutant7(numbers);
 
-        System.out.println(c.mean(numbers));
-        System.out.println(c.meanMutant7(numbers));
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant7(numbers));
 
         assertFalse(normalOutput == mutantOutput);
 
@@ -356,201 +356,239 @@ public class calculatortest {
         double normalOutput = c.mean(numbers);
         double mutantOutput = c.meanMutant8(numbers);
 
-        System.out.println(c.mean(numbers));
-        System.out.println(c.meanMutant8(numbers));
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant8(numbers));
 
         assertFalse(normalOutput == mutantOutput);
 
 
     }
 
-    // Row: 4
+
     @Test
     void test20() {
-        double[] numbers = {-23};
+        double[] numbers = {2, 3, 4};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, negative, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant1(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test21() {
-        double[] numbers = {37};
+        double[] numbers = {3,1,5};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant2(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 6
     @Test
     void test22() {
-        double[] numbers = {24};
+        double[] numbers = {2,6,8};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant3(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test23() {
-        double[] numbers = {87};
+        double[] numbers = {9, 1, 6};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant4(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 7
     @Test
     void test24() {
-        double[] numbers = {3};
+        double[] numbers = {12, 9, 1};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant5(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-
-
-    // Predicate Table: 5
-
-    // Row: 8
     @Test
     void test25() {
-        double[] numbers = {5};
+        double[] numbers = {22, 4, 2};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant6(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 4
     @Test
     void test26() {
-        double[] numbers = {-1};
+        double[] numbers = {21, 2, 3};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant7(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test27() {
-        double[] numbers = {7};
+        double[] numbers = {8, 4, 29};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.subtract(numbers);
+        double mutantOutput = c.subtractMutant8(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 6
     @Test
     void test28() {
-        double[] numbers = {8};
+        double[] numbers = {3, 1, 2};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.divide(numbers);
+        double mutantOutput = c.divideMutant1(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test29() {
-        double[] numbers = {9};
+        double[] numbers = {4, 3, 9};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.divide(numbers);
+        double mutantOutput = c.divideMutant2(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 7
     @Test
     void test30() {
-        double[] numbers = {73};
+        double[] numbers = {4, 2, 1};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.divide(numbers);
+        double mutantOutput = c.divideMutant3(numbers);
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Predicate Table: 6
-    // Row: 8
     @Test
     void test31() {
-        double[] numbers = {57};
+        double[] numbers = {24, 3, 2};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.divide(numbers);
+        double mutantOutput = c.divideMutant4(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 4
     @Test
     void test32() {
-        double[] numbers = {-67};
+        double[] numbers = {50, 5, 2};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, negative, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.divide(numbers);
+        double mutantOutput = c.divideMutant5(numbers);
+
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test33() {
-        double[] numbers = {83};
+        double[] numbers = {1, 2, 3, 4, 5, 6};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant1(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 6
     @Test
     void test34() {
-        double[] numbers = {382};
+        double[] numbers = {1, 2};
         calculator c = new calculator();
-        assertEquals("This number is a 3 digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant2(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test35() {
-        double[] numbers = {71};
+        double[] numbers = {1, 2, 3, 4};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant3(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 7
     @Test
     void test36() {
-        double[] numbers = {7};
+        double[] numbers = {1, 2, 3, 4, 5, 6, 7, 8};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant4(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Predicate Table: 7
-    // Row: 8
     @Test
     void test37() {
-        double[] numbers = {-8};
+        double[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant5(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 4
     @Test
     void test38() {
-        double[] numbers = {8};
+        double[] numbers = {1, 2};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant6(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 8
     @Test
     void test39() {
-        double[] numbers = {-4};
+        double[] numbers = {1, 2};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant7(numbers);
+
+        assertFalse(normalOutput == mutantOutput);
     }
 
-    // Row: 6
     @Test
     void test40() {
-        double[] numbers = {-3};
+        double[] numbers = {1, 2, 3, 4, 5, 6};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and odd number", c.numberInfo(numbers));
-    }
 
-    // Row: 8
-    @Test
-    void test41() {
-        double[] numbers = {-6};
-        calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
-    }
+        double normalOutput = c.median(numbers);
+        double mutantOutput = c.medianMutant8(numbers);
 
-    // Row: 7
-    @Test
-    void test42() {
-        double[] numbers = {-1234};
-        calculator c = new calculator();
-        assertEquals("This number is a 4 digit, negative, and even number", c.numberInfo(numbers));
+        assertFalse(normalOutput == mutantOutput);
     }
 }
+
+
+
