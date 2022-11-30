@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 public class calculatortest {
 
 
-    // -------------------- CheckRightTriangle() METHOD -------------------------- //
-
     // TEST 1: add()
     // INPUT: {1,2,3}
     // NORMAL OUTPUT: 6
@@ -61,154 +59,309 @@ public class calculatortest {
     }
 
 
+    // TEST 4: add()
     @Test
     void test4() {
 
+        double[] numbers = {3, 2, 1};
+        calculator c = new calculator();
+
+        double normalOutput = c.add(numbers);
+        double mutantOutput = c.addMutant4(numbers);
+
+        //System.out.println(c.add(numbers));
+        //System.out.println(c.addMutant4(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
     }
 
 
-    // TEST 5: checkRightTriangle
-    // INPUT: {7,5,7}
-    // EXPECTED OUTPUT: "This is NOT a right triangle"
+    // TEST 5: add()
     @Test
     void test5() {
-        double[] sides = {7, 5, 7};
+
+
+        double[] numbers = {6, 3, 1};
         calculator c = new calculator();
-        assertEquals("This is NOT a right triangle", c.checkRightTriangle(sides));
+
+        double normalOutput = c.add(numbers);
+        double mutantOutput = c.addMutant5(numbers);
+
+        //System.out.println(c.add(numbers));
+        //System.out.println(c.addMutant5(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
-    // TEST 6: checkRightTriangle
-    // INPUT: {2,-4,8}
-    // EXPECTED OUTPUT: "Invalid Input"
+
+
+    // TEST 6: add()
     @Test
     void test6() {
-        double[] sides = {2, -4, 8};
+
+        double[] numbers = {2, 4, 6};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+
+        double normalOutput = c.add(numbers);
+        double mutantOutput = c.addMutant6(numbers);
+
+        //System.out.println(c.add(numbers));
+        //System.out.println(c.addMutant5(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
     }
 
-    // TEST 7: checkRightTriangle
-    // INPUT: {-5,12,13}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // TEST 7: multiply()
     @Test
     void test7() {
-        double[] sides = {-5, 12, 13};
+
+        double[] numbers = {2, 4, 6};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+
+        double normalOutput = c.multiply(numbers);
+        double mutantOutput = c.multiplyMutant1(numbers);
+
+        //System.out.println(c.multiply(numbers));
+        //System.out.println(c.multiplyMutant1(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
-    // TEST 8: checkRightTriangle
-    // INPUT: {-7,7,7}
-    // EXPECTED OUTPUT: "Invalid Input"
+
+    // TEST 8: multiply()
     @Test
     void test8() {
-        double[] sides = {-7, 7, 7};
+
+        double[] numbers = {3, 5, 8};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+
+        double normalOutput = c.multiply(numbers);
+        double mutantOutput = c.multiplyMutant2(numbers);
+
+        //System.out.println(c.multiply(numbers));
+        //System.out.println(c.multiplyMutant2(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
 
-    // TEST 9: checkRightTriangle
-    // INPUT: {5,-5,5}
-    // EXPECTED OUTPUT: "Invalid Input"
+    // TEST 9: multiply()
     @Test
     void test9() {
-        double[] sides = {5, -5, 5};
+
+        double[] numbers = {6, 2, 5};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+
+        double normalOutput = c.multiply(numbers);
+        double mutantOutput = c.multiplyMutant3(numbers);
+
+        //System.out.println(c.multiply(numbers));
+        //System.out.println(c.multiplyMutant3(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
 
 
-    // TEST 10
-
+    // TEST 10: multiply()
     @Test
     void test10() {
-        double[] sides = {10, 6, 8};
+
+        double[] numbers = {7, 2, 1};
         calculator c = new calculator();
-        assertEquals("Right triangle - First side is hypotenuse", c.checkRightTriangle(sides));
+
+        double normalOutput = c.multiply(numbers);
+        double mutantOutput = c.multiplyMutant4(numbers);
+
+        //System.out.println(c.multiply(numbers));
+        //System.out.println(c.multiplyMutant4(numbers));
+
+        assertNotEquals(normalOutput, mutantOutput, 0.0);
+
+
+
     }
 
-    // TEST 11
 
+    // TEST 11: multiply()
     @Test
     void test11() {
-        double[] sides = {10, 6, -8};
+
+        double[] numbers = {4, 4, 4};
         calculator c = new calculator();
-        assertEquals("Invalid Input", c.checkRightTriangle(sides));
+
+        double normalOutput = c.multiply(numbers);
+        double mutantOutput = c.multiplyMutant5(numbers);
+
+        //System.out.println(c.multiply(numbers));
+        //System.out.println(c.multiplyMutant5(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
     }
 
-    // TEST 12
+    // TEST 12: mean()
 
     @Test
     void test12() {
-        double[] sides = {9, 12, 15};
+
+        double[] numbers = {4, 4, 4};
         calculator c = new calculator();
-        assertEquals("Right triangle - Third side is hypotenuse", c.checkRightTriangle(sides));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant1(numbers);
+
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant1(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
+
+
     }
 
 
 
 
 
-    // Predicate Table: 3
-
-    // Row: 8
+    // TEST 13: mean()
     @Test
     void test13() {
-        double[] numbers = {2};
+
+        double[] numbers = {2, 4, 8};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant2(numbers);
+
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant2(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
-    // Row: 4
+    // TEST 14: mean()
     @Test
     void test14() {
-        double[] numbers = {-2};
+
+        double[] numbers = {2, 2, 2};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, negative, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant3(numbers);
+
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant3(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
-    // Row: 8
+    // TEST 15: mean()
     @Test
     void test15() {
-        double[] numbers = {4};
+
+        double[] numbers = {7, 7, 7};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant4(numbers);
+
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant4(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
+
     }
 
-    // Row: 6
+    // TEST 16: mean()
     @Test
     void test16() {
-        double[] numbers = {1};
+
+        double[] numbers = {5, 5, 5};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant5(numbers);
+
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant5(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
+
     }
 
-    // Row: 8
+    // TEST 17: mean()
     @Test
     void test17() {
-        double[] numbers = {6};
+
+        double[] numbers = {3, 3, 3};
         calculator c = new calculator();
-        assertEquals("This number is a single digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant6(numbers);
+
+        //System.out.println(c.mean(numbers));
+        //System.out.println(c.meanMutant6(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
-    // Row: 7
+    // TEST 18: mean()
     @Test
     void test18() {
-        double[] numbers = {282};
+
+        double[] numbers = {8, 8, 8};
         calculator c = new calculator();
-        assertEquals("This number is a 3 digit, positive, and even number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant7(numbers);
+
+        System.out.println(c.mean(numbers));
+        System.out.println(c.meanMutant7(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
+
     }
 
-    // Predicate Table: 4
-
-    // Row: 8
+    // TEST 19: mean()
     @Test
     void test19() {
-        double[] numbers = {33};
+
+        double[] numbers = {12, 12, 12};
         calculator c = new calculator();
-        assertEquals("This number is a 2 digit, positive, and odd number", c.numberInfo(numbers));
+
+        double normalOutput = c.mean(numbers);
+        double mutantOutput = c.meanMutant8(numbers);
+
+        System.out.println(c.mean(numbers));
+        System.out.println(c.meanMutant8(numbers));
+
+        assertFalse(normalOutput == mutantOutput);
+
+
     }
 
     // Row: 4

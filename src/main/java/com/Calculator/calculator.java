@@ -7,6 +7,8 @@ import java.util.ArrayList; // import the ArrayList class
 
 
 public class calculator {
+
+    // ----------------------- ADD METHOD FUNCTIONS ------------------------------
     public static double add(double[] numbers) {
         double total = 0;
 
@@ -47,6 +49,40 @@ public class calculator {
         return (total);
     }
 
+
+    public static double addMutant4(double[] numbers) {
+        double total = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total = numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double addMutant5(double[] numbers) {
+        double total = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total %= numbers[i];
+        }
+
+        return (total);
+    }
+
+    public static double addMutant6(double[] numbers) {
+        double total = 0;
+
+        for (int i = 0; i > numbers.length; i++) {
+            total = numbers[i];
+        }
+
+        return (total);
+    }
+
+
+    // --------------------- MULTIPLY METHOD FUNCTIONS --------------------------
+
     public static double multiply(double[] numbers) {
         double total = 1;
 
@@ -56,6 +92,60 @@ public class calculator {
 
         return (total);
     }
+
+    public static double multiplyMutant1(double[] numbers) {
+        double total = 1;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total = numbers[i] + total;
+        }
+
+        return (total);
+    }
+
+    public static double multiplyMutant2(double[] numbers) {
+        double total = 1;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total = numbers[i] - total;
+        }
+
+        return (total);
+    }
+
+    public static double multiplyMutant3(double[] numbers) {
+        double total = 1;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total = numbers[i] / total;
+        }
+
+        return (total);
+    }
+
+    public static double multiplyMutant4(double[] numbers) {
+        double total = 1;
+
+        for (int i = 0; i < numbers.length; i++) {
+            total = numbers[i] % total;
+        }
+
+        return (total);
+    }
+
+    public static double multiplyMutant5(double[] numbers) {
+        double total = 1;
+
+        for (int i = 0; i > numbers.length; i++) {
+            total = numbers[i] * total;
+        }
+
+        return (total);
+    }
+
+
+
+
 
     public static double divide(double[] numbers) {
         double total = numbers[0];
@@ -77,10 +167,104 @@ public class calculator {
         return (total);
     }
 
+
+
+    // ------------------ MEAN FUNCTIONS ------------------------------------
+
     public static double mean(double[] numbers) {
         double total = 0;
         for (int i = 0; i < numbers.length; i++) {
             total += numbers[i];
+        }
+        double mean = total / numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant1(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+        double mean = total + numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant2(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+        double mean = total - numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant3(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+        double mean = total * numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant4(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+        double mean = total % numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant5(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total -= numbers[i];
+        }
+        double mean = total / numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant6(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total *= numbers[i];
+        }
+        double mean = total / numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant7(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total /= numbers[i];
+        }
+        double mean = total / numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant8(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total %= numbers[i];
+        }
+        double mean = total / numbers.length;
+
+        return (mean);
+    }
+
+    public static double meanMutant9(double[] numbers) {
+        double total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total = numbers[i];
         }
         double mean = total / numbers.length;
 
